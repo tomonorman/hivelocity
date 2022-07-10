@@ -47,3 +47,5 @@ return [
             ...
         ];
 ```
+
+3. Run the test with `phpunit tests`
