@@ -12,10 +12,9 @@ final class FinalResultTest extends TestCase
      */
     public function testReturnsTheCorrectHash($controlData): void
     {
-        $f = new FinalResult();
-        $res = $f->results('tests/support/' . $controlData['filename']);
-        unset($res["document"]);
-        $this->assertSame($res, $controlData);
+        $testResult = (new FinalResult())->results('tests/support/' . $controlData['filename']);
+        unset($testResult["document"]);
+        $this->assertSame($testResult, $controlData);
     }
 
     public function bankRecordsProvider()
